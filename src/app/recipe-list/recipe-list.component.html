@@ -1,17 +1,23 @@
 <div class="recipe-list-container">
     <h1>Recipes</h1>
-    <div class="search-bar">Search Bar to filter recipes</div>
+    <div class="search-bar-container">
+        <input type="text" placeholder="Search Recipes" class="search-bar">
+    </div>
     <br>
-    <div class="recipes">Recipe name + fav button on the side</div>
+    <div class="recipes-container">Recipe name + fav button on the side
         <div class="recipe-list-container"></div>
         <div class="recipe-list-item"></div>
-        <li>
+        <li>   
+            <label>Recipe Name Sample</label>
             <img>
-            <p></p>
-            <a></a>
-            <hr>
+            <button class="heart-button"><div class="heart"></div></button> 
+            <button (click)="toggleClass()">more info</button>
+            <p [className]="activeClass">
+                Recipe Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </p>
+            <br>
+            <a href="">sample link</a>
         </li>
-    <br>
-    <div class="recipe-details">Recipe details</div>
-    <br>
+        <br>
+    </div>
 </div>

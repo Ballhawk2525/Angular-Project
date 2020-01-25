@@ -1,12 +1,17 @@
 <div class="main-container">
   <div class="header-container">
-    Logo + Title
+    <div class="img-container"></div>
+    
+    <nav class="nav-container">
+      <div class="nav-link-wrapper">
+        <a routerLink="/Home" routerLinkActive="active">Home</a>
+      </div>
+      <div class="nav-link-wrapper">
+        <a routerLink="/Favorites" routerLinkActive="active">Favorites</a>
+      </div>
+    </nav>
   </div>
-  <nav class="nav-container">
-    <a routerLink="/Home" routerLinkActive="active">Mixie</a>
-    <a routerLink="/Favorites" routerLinkActive="active">Lizzy</a>
-  </nav>
+  <router-outlet></router-outlet>
 </div>
-<app-recipe-list></app-recipe-list>
-<router-outlet></router-outlet>
+
 

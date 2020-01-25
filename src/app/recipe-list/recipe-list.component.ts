@@ -12,4 +12,12 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  activeClass = 'hide-details'
+  toggleClass() {
+    if(this.activeClass==="hide-details"){
+        this.activeClass='show-details';
+    }else{
+        this.activeClass='hide-details';
+    }
+  }
 }
