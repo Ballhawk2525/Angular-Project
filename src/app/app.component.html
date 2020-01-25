@@ -1,16 +1,17 @@
 <div class="main-container">
   <div class="header-container">
-    Logo + Title
+    <div class="img-container"></div>
+    
+    <nav class="nav-container">
+      <div class="nav-link-wrapper">
+        <a routerLink="/Home" routerLinkActive="active">Home</a>
+      </div>
+      <div class="nav-link-wrapper">
+        <a routerLink="/Favorites" routerLinkActive="active">Favorites</a>
+      </div>
+    </nav>
   </div>
-  <br>
-  <div class="body-container">
-    <div class="search-bar">Search Bar to filter recipes</div>
-    <br>
-    <div class="recipes">Recipe name + fav button on the side</div> 
-    <br>
-    <div class="recipe-details">Recipe details</div>
-    <br>
-  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
+
 

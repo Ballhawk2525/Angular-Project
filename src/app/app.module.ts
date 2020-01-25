@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     RecipeListComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
