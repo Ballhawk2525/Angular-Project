@@ -1,1 +1,10 @@
 <p>recipe-list works!</p>
+<ul class="post">
+  <li *ngFor="let post of data.data.children | slice:0:10; let i=index">
+    <div>
+      <div class="post-title">{{ post.data.title }}</div>
+      <!-- <div><img class="thumbnails" src="{{post.data.thumbnail}}" /></div>
+        <div><a href="{{post.data.permalink}}">Click here to view post</a></div> -->
+    </div>
+  </li>
+</ul>
