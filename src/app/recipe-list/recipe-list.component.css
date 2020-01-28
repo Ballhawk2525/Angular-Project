@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.heart-button {
+/* .heart-button {
     transform: translateY(10px);
     border: none;
 }
@@ -37,7 +37,7 @@
 .heart:after {
   left: 15px;
   top: 0;
-}
+} */
 
 li {
     list-style-type: circle;
