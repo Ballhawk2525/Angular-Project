@@ -59,3 +59,13 @@ h2 {
     display: block;
     overflow-wrap: break-word;
 }
+
+.heart-button-off {
+  display: none;
+  /* visibility: hidden; */
+}
+
+.heart-button-on {
+  /* display: block; */
+  visibility: visible;
+}
