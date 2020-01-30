@@ -1,9 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+li, a, p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: dimgray;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.links {
+  list-style: none;
+}
+
+.links li {
+  display: inline;
+  padding:  0px 20px;
+}
+
+.links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.links li a:hover {
+  color: orangered;
+}
+
+p {
+  font-style: italic;
+}
+
+header {
+  border-bottom: 2px solid dimgray;
+
+}
+
+
 .search-bar-container {
     display: flex;
     justify-content: center;
 }
 
-.heart-button {
+.recipes-container {
+  border: 1px solid #7c7c7c;
+  width: 75%;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}
+
+/* .heart-button {
     transform: translateY(10px);
     border: none;
 }
@@ -37,10 +95,10 @@
 .heart:after {
   left: 15px;
   top: 0;
-}
+} */
 
 li {
-    list-style-type: circle;
+    /* list-style-type: circle; */
 }
 
 .button-container {
@@ -58,4 +116,26 @@ h2 {
 .show-details {
     display: block;
     overflow-wrap: break-word;
+}
+
+button {
+  border: none;
+}
+
+.fas {
+  font-size: 30px;
+  cursor: pointer;
+  color: #f3b700;
+  user-select: none;
+}
+
+.fav {
+  font-size: 40px;
+  cursor: pointer;
+  color: orangered;
+  user-select: none;
+}
+
+.fas:hover {
+  color: orange;
 }

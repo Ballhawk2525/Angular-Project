@@ -1,22 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EdamamApiService } from '../edamam-api.service';
 
 @Component({
-  selector: 'app-recipe-list',
-  templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.css']
+  selector: "app-recipe-list",
+  templateUrl: "./recipe-list.component.html",
+  styleUrls: ["./recipe-list.component.css"]
 })
-export class RecipeListComponent {
-
+export class RecipeListComponent implements OnInit {
   constructor(private apiService: EdamamApiService) { }
   data = this.apiService.getData().subscribe((data) => this.data = { ...data });
 
-  activeClass = 'hide-details'
-  toggleClass() {
-    if(this.activeClass==="hide-details"){
-        this.activeClass='show-details';
-    }else{
-        this.activeClass='hide-details';
+  ngOnInit() {}
+
+  favorite() {
+    let fire:any = document.querySelector("#favButton");
+    fire.classList.toggle("fav");
+
+    // if ("fas" === "fas") {
+    //   fire.style.color = "red";
+    //   return;
+    // } else {
+    //   // fire.style.color = "orange";
+    //   null;
+    // }  
     }
-  }
-}
+
+  activeClass = "hide-details";
+  toggleClass(activeClass) {
+    if (this.activeClass === "hide-details") {
+      this.activeClass = "show-details";
+    } else {
+      this.activeClass = "hide-details";
+    }}}
