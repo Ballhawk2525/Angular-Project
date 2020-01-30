@@ -10,5 +10,4 @@ import { EdamamApiService } from './edamam-api.service';
 export class AppComponent {
   constructor(private apiService: EdamamApiService) { }
   title = 'Recipes Routing';
-  data = this.apiService.getData().subscribe((data) => this.data = { ...data });
 }
