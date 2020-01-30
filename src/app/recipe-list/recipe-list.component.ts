@@ -34,3 +34,10 @@ export class RecipeListComponent implements OnInit {
     }
   }
 }
+
+export function addFavorite() {
+  let favoriteLabel = document.querySelector('#recipe-label');
+  let favoriteDetails = document.querySelector('#recipe-details');
+
+  console.log(favoriteLabel, favoriteDetails);
+}
