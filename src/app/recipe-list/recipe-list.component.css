@@ -12,6 +12,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
+  border-bottom: 2px solid dimgray;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {
@@ -39,11 +45,10 @@ p {
   font-style: italic;
 }
 
-header {
-  border-bottom: 2px solid dimgray;
-
+img {
+  width: 200px;
+  height: 100px;
 }
-
 
 .search-bar-container {
     display: flex;
@@ -54,51 +59,6 @@ header {
   border: 1px solid #7c7c7c;
   width: 75%;
   font-family: 'Roboto', sans-serif;
-}
-
-img {
-  width: 200px;
-  height: 100px;
-}
-
-/* .heart-button {
-    transform: translateY(10px);
-    border: none;
-}
-
-.heart {
-  background-color: red;
-  display: inline-block;
-  height: 30px;
-  margin: 0 10px;
-  position: relative;
-  top: 0;
-  transform: rotate(-45deg);
-  width: 30px;
-}
-
-.heart:before,
-.heart:after {
-  content: "";
-  background-color: red;
-  border-radius: 50%;
-  height: 30px;
-  position: absolute;
-  width: 30px;
-}
-
-.heart:before {
-  top: -15px;
-  left: 0;
-}
-
-.heart:after {
-  left: 15px;
-  top: 0;
-} */
-
-li {
-    /* list-style-type: circle; */
 }
 
 .button-container {
