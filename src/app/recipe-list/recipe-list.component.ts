@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EdamamApiService } from '../edamam-api.service';
 
 @Component({
@@ -7,37 +7,26 @@ import { EdamamApiService } from '../edamam-api.service';
   styleUrls: ["./recipe-list.component.css"]
 })
 export class RecipeListComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-
-  favorited = "heart-button-off";
-  favorite() {
-    // let fav:any = document.getElementsByClassName(".heart-button-off");
-    // let favOn:any = document.getElementsByClassName(".heart-button-on");
-    if (this.favorited === "heart-button-off") {
-      // fav.style.display = "none";
-      // fav.style.visibility = "hidden";
-
-      // favOn.style.display = "block";
-      // favOn.style.visibility = "visible";
-
-      this.favorited = "heart-button-on";
-    } else {
-      this.favorited = "heart-button-off";
-    }
-  }}
-export class RecipeListComponent {
-
   constructor(private apiService: EdamamApiService) { }
   data = this.apiService.getData().subscribe((data) => this.data = { ...data });
 
+  ngOnInit() {}
+
+  // favorite() {
+  //   let fire:any = document.getElementsByClassName("fas");
+  //   if ("fas" === "fas") {
+  //     fire.style.color = "red";
+  //     return;
+  //   } else {
+  //     // fire.style.color = "orange";
+  //     null;
+  //   }  
+  //   }
+
   activeClass = "hide-details";
-  toggleClass() {
+  toggleClass(activeClass) {
     if (this.activeClass === "hide-details") {
       this.activeClass = "show-details";
     } else {
       this.activeClass = "hide-details";
-    }
-  }
-}
+    }}}
