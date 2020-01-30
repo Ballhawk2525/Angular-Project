@@ -9,14 +9,23 @@ import { EdamamApiService } from '../edamam-api.service';
 export class RecipeListComponent {
 
   constructor(private apiService: EdamamApiService) { }
-  data = this.apiService.getData().subscribe((data) => this.data = { ...data });
+  data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
+  userSearch = null;
+
+  onSearch() {
+    this.data = this.apiService.getData(this.userSearch).subscribe((data) => {
+      this.data = { ...data };
+      console.log(data);
+    });
+
+  }
 
   activeClass = 'hide-details'
   toggleClass() {
-    if(this.activeClass==="hide-details"){
-        this.activeClass='show-details';
-    }else{
-        this.activeClass='hide-details';
+    if (this.activeClass === "hide-details") {
+      this.activeClass = 'show-details';
+    } else {
+      this.activeClass = 'hide-details';
     }
   }
 }
