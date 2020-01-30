@@ -14,7 +14,7 @@
     <div class="recipe-list-item"></div>
     <li>
       <label id='recipe-label'> {{ data.hits[0].recipe.label }} </label>
-      <button ><i  (click)="favorite()" class="fas fa-fire" id="favButton"></i></button>
+      <button><i  (click)="favorite()" class="fas fa-fire" id="favButton"></i></button>
       <button (click)="toggleClass()">more info</button>
       <p [className]="activeClass" id="recipe-details" *ngFor="let ingredient of data.hits[0].recipe.ingredientLines">
         {{ ingredient }}
