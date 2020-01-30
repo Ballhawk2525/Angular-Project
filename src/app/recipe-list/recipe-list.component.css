@@ -60,3 +60,7 @@ h2 {
   overflow-wrap: break-word;
 }
 
+.sampleLink {
+  text-decoration: none;
+  color: #ED1C24;
+}

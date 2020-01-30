@@ -8,18 +8,17 @@
     <div class="recipe-list-container">
       <div class="recipe-list-item">
         <li>
-          <label id='recipe-label'>Recipe Name Sample</label>
+          <label id='recipe-label'> {{ data.hits[0].recipe.label }}</label>
           <img>
           <button class="heart-button">
             <div class="heart"></div>
           </button>
           <button (click)="toggleClass()">more info</button>
-          <p [className]="activeClass" id="recipe-details">
-            Recipe Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
+          <p [className]="activeClass" id="recipe-details" *ngFor="let ingredient of data.hits[0].recipe.ingredientLines">
+            {{ ingredient }}
           </p>
           <br>
-          <a href="">sample link</a>
+          <a href="https://developer.edamam.com/edamam-recipe-api-demo" class="sampleLink">Edamam Website</a>
         </li>
       </div>
     </div>
