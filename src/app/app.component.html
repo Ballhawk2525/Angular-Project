@@ -1,5 +1,18 @@
 <div class="main-container">
   <div class="header-container">
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="logo" />
+      <nav>
+        <ul class="links">
+          <li>
+            <a routerLink="" routerLinkActive="active">Home</a></li>
+          <li>
+            <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+      <p>"See What's Hot on Da Block!"</p>
+    </header>
     <div class="img-container"></div>
     <nav class="nav-container">
       <div class="nav-link-wrapper">
@@ -10,5 +23,7 @@
       </div>
     </nav>
   </div>
-  <router-outlet></router-outlet>
 </div>
+
+<router-outlet></router-outlet>
+
