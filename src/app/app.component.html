@@ -1,16 +1,15 @@
-<div class="main-container">
-  <div class="header-container">
-    <div class="img-container"></div>
-    <nav class="nav-container">
-      <div class="nav-link-wrapper">
-        <a routerLink="/Home" routerLinkActive="active">Home</a>
-      </div>
-      <div class="nav-link-wrapper">
-        <a routerLink="/Favorites" routerLinkActive="active">Favorites</a>
-      </div>
-    </nav>
-  </div>
-</div>
+<header>
+  <img class="logo" src="./assets/logo.png" alt="logo" />
+  <nav>
+    <ul class="links">
+      <li>
+        <a routerLink="home" routerLinkActive="active">Home</a></li>
+      <li>
+        <a routerLink="favorites" routerLinkActive="active">Favorites</a>
+      </li>
+    </ul>
+  </nav>
+  <p>"See What's Hot on Da Block!"</p>
+</header>
 
 <router-outlet></router-outlet>
-
