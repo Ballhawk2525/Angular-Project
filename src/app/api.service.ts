@@ -14,5 +14,4 @@ export class ApiService { //API Call
     }
 }
 
-console.log(userCreds);
   

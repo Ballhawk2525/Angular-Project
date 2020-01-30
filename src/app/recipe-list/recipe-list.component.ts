@@ -10,7 +10,7 @@ export class RecipeListComponent {
 
   constructor(private apiService: EdamamApiService) { }
   data = this.apiService.getData().subscribe((data) => this.data = { ...data });
-
+  
   activeClass = 'hide-details'
   toggleClass() {
     if(this.activeClass==="hide-details"){
@@ -20,3 +20,6 @@ export class RecipeListComponent {
     }
   }
 }
+
+
+

@@ -5,22 +5,26 @@
   </div>
   <br>
   <div class="recipes-container">Recipe name + fav button on the side
-    <div class="recipe-list-container"></div>
-    <div class="recipe-list-item"></div>
-    <li>
-      <label>Recipe Name Sample</label>
-      <img>
-      <button class="heart-button">
-        <div class="heart"></div>
-      </button>
-      <button (click)="toggleClass()">more info</button>
-      <p [className]="activeClass">
-        Recipe Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
-      </p>
-      <br>
-      <a href="">sample link</a>
-    </li>
+    <div class="recipe-list-container">
+      <div class="recipe-list-item">
+        <li>
+          <label id='recipe-label'>Recipe Name Sample</label>
+          <img>
+          <button class="heart-button">
+            <div class="heart"></div>
+          </button>
+          <button (click)="toggleClass()">more info</button>
+          <p [className]="activeClass" id="recipe-details">
+            Recipe Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.
+          </p>
+          <br>
+          <a href="">sample link</a>
+        </li>
+      </div>
+    </div>
+    
+    
     <br>
   </div>
 </div>

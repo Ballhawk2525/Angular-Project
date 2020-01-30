@@ -40,22 +40,23 @@
 }
 
 li {
-    list-style-type: circle;
+  list-style-type: circle;
 }
 
 .button-container {
-    padding: 0 .5vw;
+  padding: 0 .5vw;
 }
 
 h2 {
-    font-size: small;
+  font-size: small;
 }
 
 .hide-details {
-    display: none;
+  display: none;
 }
 
 .show-details {
-    display: block;
-    overflow-wrap: break-word;
+  display: block;
+  overflow-wrap: break-word;
 }
+
