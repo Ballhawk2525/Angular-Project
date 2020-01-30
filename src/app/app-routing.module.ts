@@ -6,9 +6,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [
-  {path: 'Home', component: RecipeListComponent }, 
-  {path: 'Favorites', component: FavoritesPageComponent},
-  {path: '', redirectTo: '/Home', pathMatch: 'full' },
+  {path: 'home', component: RecipeListComponent }, 
+  {path: 'favorites', component: FavoritesPageComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent}
 ];
 
