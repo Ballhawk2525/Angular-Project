@@ -41,6 +41,7 @@ p {
 
 header {
   border-bottom: 2px solid dimgray;
+
 }
 
 
@@ -124,9 +125,17 @@ button {
 .fas {
   font-size: 30px;
   cursor: pointer;
-  color: orange;
+  color: #f3b700;
   user-select: none;
 }
-.fas:hover {
+
+.fav {
+  font-size: 40px;
+  cursor: pointer;
   color: orangered;
+  user-select: none;
+}
+
+.fas:hover {
+  color: orange;
 }

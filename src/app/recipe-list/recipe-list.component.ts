@@ -12,16 +12,18 @@ export class RecipeListComponent implements OnInit {
 
   ngOnInit() {}
 
-  // favorite() {
-  //   let fire:any = document.getElementsByClassName("fas");
-  //   if ("fas" === "fas") {
-  //     fire.style.color = "red";
-  //     return;
-  //   } else {
-  //     // fire.style.color = "orange";
-  //     null;
-  //   }  
-  //   }
+  favorite() {
+    let fire:any = document.querySelector("#favButton");
+    fire.classList.toggle("fav");
+
+    // if ("fas" === "fas") {
+    //   fire.style.color = "red";
+    //   return;
+    // } else {
+    //   // fire.style.color = "orange";
+    //   null;
+    // }  
+    }
 
   activeClass = "hide-details";
   toggleClass(activeClass) {
