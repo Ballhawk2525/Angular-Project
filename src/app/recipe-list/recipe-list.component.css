@@ -61,6 +61,15 @@ img {
   font-family: 'Roboto', sans-serif;
 }
 
+img {
+  width: 200px;
+  height: 100px;
+}
+
+li {
+    list-style-type: circle;
+}
+
 .button-container {
   padding: 0 .5vw;
 }
@@ -76,6 +85,11 @@ h2 {
 .show-details {
   display: block;
   overflow-wrap: break-word;
+}
+
+.sampleLink {
+  text-decoration: none;
+  color: #ED1C24;
 }
 
 button {
