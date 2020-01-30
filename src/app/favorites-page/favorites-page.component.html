@@ -3,7 +3,8 @@
     <div class="favorite-list-container">
         <div class="favorite-list-item">
             <ul>
-                <li></li>
+                <li *ngFor="let favorite of favoritesList"></li>
+                    {{ favorite.favorite }}
                 <button>delete</button> 
             </ul>
         </div>
