@@ -1,7 +1,12 @@
 <div class="recipe-list-container">
   <h1>Recipes</h1>
   <div class="search-bar-container">
-    <input type="text" placeholder="Search Recipes" class="search-bar" />
+    <input [(ngModel)]="userSearch" type="text" placeholder="Search Recipes" class="search-bar">
+
+    <button (click)="onSearch()">
+      Search
+    </button>
+    <div *ngFor="let recipe of data.hits">{{ recipe.recipe.label }}</div>
   </div>
   <div class="recipes-container">
     Recipe name + fav button on the side

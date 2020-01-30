@@ -8,12 +8,21 @@ import { EdamamApiService } from '../edamam-api.service';
 })
 export class RecipeListComponent implements OnInit {
   constructor(private apiService: EdamamApiService) { }
-  data = this.apiService.getData().subscribe((data) => this.data = { ...data });
+  data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
+  userSearch = null;
 
-  ngOnInit() {}
+  onSearch() {
+    this.data = this.apiService.getData(this.userSearch).subscribe((data) => {
+      this.data = { ...data };
+      console.log(data);
+    });
+
+  }
+
+  ngOnInit() { }
 
   favorite() {
-    let fire:any = document.querySelector("#favButton");
+    let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
   }
   activeClass = "hide-details";
@@ -22,4 +31,6 @@ export class RecipeListComponent implements OnInit {
       this.activeClass = "show-details";
     } else {
       this.activeClass = "hide-details";
-    }}}
+    }
+  }
+}
