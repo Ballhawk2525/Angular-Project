@@ -9,7 +9,13 @@ export class EdamamApiService {
 
   constructor(private http: HttpClient) { }
   getData(userSearch) {
-    let apiUrl = `https://api.edamam.com/search?q=${userSearch}&app_id=${userCreds.userID}&app_key=${userCreds.userKey}&from=0&to=3&calories=591-722&health=alcohol-free`;
+    console.log(userSearch);
+    let apiUrl = `https://api.edamam.com/search?app_id=${userCreds.userID}&app_key=${userCreds.userKey}&q=${userSearch.textSearch}`;
+
+
     return this.http.get(apiUrl);
+
+
   }
+
 }

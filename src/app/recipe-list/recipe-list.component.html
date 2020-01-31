@@ -1,28 +1,8 @@
-<!-- <header>
-  <img class="logo" src="./assets/logo.png" alt="logo" />
-  <nav>
-    <ul class="links">
-      <li>
-        <a routerLink="" routerLinkActive="active">Home</a></li>
-      <li>
-        <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
-      </li>
-    </ul>
-  </nav>
-  <p>"See What's Hot on Da Block!"</p>
-</header> -->
-
 <div class="recipe-list-container">
   <h1>Recipes</h1>
-  <div class="search-bar-container">
-    <input [(ngModel)]="userSearch" type="text" placeholder="Search Recipes" class="search-bar">
+  <app-search-criteria></app-search-criteria>
 
-    <button (click)="onSearch()">
-      Search
-    </button>
-    <div *ngFor="let recipe of data.hits">{{ recipe.recipe.label }}</div>
-
-  </div>
+  <div *ngFor="let recipe of data.hits">{{ recipe.recipe.label }}</div>
   <div class="recipes-container">
     Recipe name + fav button on the side
     <div class="recipe-list-container"></div>
@@ -41,8 +21,3 @@
     <br />
   </div>
 </div>
-
-<!-- <button><i class="fas fa-fire"></i></button> -->
-<!-- <button [className]="favorited"><i class="fas fa-heart"></i></button>  -->
-
-<!-- (click)="favorite()" -->
