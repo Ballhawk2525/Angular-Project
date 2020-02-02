@@ -1,30 +1,47 @@
-import { Component, OnInit } from '@angular/core';
-import { EdamamApiService } from '../edamam-api.service';
+import { EdamamApiService } from "../edamam-api.service";
+import { Component, OnInit, Input } from "@angular/core";
+// import { Favorited } from '../favorited';
 
 @Component({
   selector: "app-recipe-list",
   templateUrl: "./recipe-list.component.html",
   styleUrls: ["./recipe-list.component.css"]
 })
+
 export class RecipeListComponent implements OnInit {
-  constructor(private apiService: EdamamApiService) { }
-  data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
+  constructor(private apiService: EdamamApiService) {}
+  data = this.apiService
+    .getData("")
+    .subscribe(data => (this.data = { ...data }));
   userSearch = null;
 
+  // @Input() recipes: Favorited;
+
   onSearch() {
-    this.data = this.apiService.getData(this.userSearch).subscribe((data) => {
+    this.data = this.apiService.getData(this.userSearch).subscribe(data => {
       this.data = { ...data };
       console.log(data);
     });
-
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  favorite() {
+  favoriteFunction(recipe) {
+    console.log(recipe);
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
   }
+
+  add(recipes) {
+    // this.apiService.
+    this.apiService.favArr.push(recipes);
+
+  }
+
+  // delete(recipe) {
+  //   this.recipes.remove(recipe);
+  // }
+
   activeClass = "hide-details";
   toggleClass() {
     if (this.activeClass === "hide-details") {

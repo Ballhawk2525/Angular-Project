@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
-  border-bottom: 2px solid dimgray;
+  /* border: 2px solid dimgray; */
   box-shadow: 10px 10px 8px #888888;
 }
 
@@ -48,54 +48,4 @@ p {
 img {
   width: 200px;
   height: 100px;
-}
-
-.search-bar-container {
-    display: flex;
-    justify-content: center;
-}
-
-.recipes-container {
-  border: 1px solid #7c7c7c;
-  width: 75%;
-  font-family: 'Roboto', sans-serif;
-}
-
-.button-container {
-  padding: 0 .5vw;
-}
-
-h2 {
-  font-size: small;
-}
-
-.hide-details {
-  display: none;
-}
-
-.show-details {
-  display: block;
-  overflow-wrap: break-word;
-}
-
-button {
-  border: none;
-}
-
-.fas {
-  font-size: 30px;
-  cursor: pointer;
-  color: #f3e300;
-  user-select: none;
-}
-
-.fav {
-  font-size: 40px;
-  cursor: pointer;
-  color: orangered;
-  user-select: none;
-}
-
-.fas:hover {
-  color: orange;
 }

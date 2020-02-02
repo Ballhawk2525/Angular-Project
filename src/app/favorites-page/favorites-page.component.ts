@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeListComponent } from '../recipe-list/recipe-list.component';
+import { EdamamApiService } from '../edamam-api.service';
 
 @Component({
   selector: 'app-favorites-page',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites-page.component.css']
 })
 export class FavoritesPageComponent implements OnInit {
+  favoriteArray;
 
-  constructor() { }
+  constructor(private apiService: EdamamApiService) {}
 
   ngOnInit() {
+    this.favoriteArray = this.apiService.favArr;
   }
+
+
 
 }

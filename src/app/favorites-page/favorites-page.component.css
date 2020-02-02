@@ -3,8 +3,5 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     border: 1px solid black;
-}
-
-li {
-    list-style-type: circle;
+    list-style: none;
 }

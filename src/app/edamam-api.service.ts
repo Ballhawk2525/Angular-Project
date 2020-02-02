@@ -6,6 +6,7 @@ import { userCreds } from './titi';
   providedIn: 'root'
 })
 export class EdamamApiService {
+  favArr: any = [];
 
   constructor(private http: HttpClient) { }
   getData(userSearch) {

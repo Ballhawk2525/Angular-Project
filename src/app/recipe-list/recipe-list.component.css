@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-li, a, p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: dimgray;
-  text-decoration: none;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-  border-bottom: 2px solid dimgray;
-  box-shadow: 10px 10px 8px #888888;
-}
-
 h1 {
   font-family: 'Roboto', sans-serif;
 }
@@ -53,12 +37,14 @@ img {
 .search-bar-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .recipes-container {
   border: 1px solid #7c7c7c;
   width: 75%;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 img {
@@ -67,7 +53,7 @@ img {
 }
 
 li {
-    list-style-type: circle;
+    list-style: none;
 }
 
 .button-container {
@@ -112,4 +98,9 @@ button {
 
 .fas:hover {
   color: orange;
+}
+
+.recipe-list-container {
+  display: flex;
+  flex-direction: column;
 }
