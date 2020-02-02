@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeListComponent } from '../recipe-list/recipe-list.component';
 import { EdamamApiService } from '../edamam-api.service';
 
+
 @Component({
   selector: 'app-favorites-page',
   templateUrl: './favorites-page.component.html',

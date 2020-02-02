@@ -2,6 +2,8 @@ import { EdamamApiService } from "../edamam-api.service";
 import { Component, OnInit, Input } from "@angular/core";
 // import { Favorited } from '../favorited';
 
+
+
 @Component({
   selector: "app-recipe-list",
   templateUrl: "./recipe-list.component.html",
@@ -17,12 +19,17 @@ export class RecipeListComponent implements OnInit {
 
   // @Input() recipes: Favorited;
 
-  onSearch() {
-    this.data = this.apiService.getData(this.userSearch).subscribe(data => {
-      this.data = { ...data };
-      console.log(data);
-    });
-  }
+  // onSearch() {
+  //   this.data = this.apiService.getData(this.userSearch).subscribe(data => {
+  //     this.data = { ...data };
+  //     console.log(data);
+  //   });
+  // }
+  // constructor(private apiService: EdamamApiService) { }
+  // data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
+
+
+
 
   ngOnInit() {}
 
@@ -50,4 +57,11 @@ export class RecipeListComponent implements OnInit {
       this.activeClass = "hide-details";
     }
   }
+}
+
+export function addFavorite() {
+  let favoriteLabel = document.querySelector('#recipe-label');
+  let favoriteDetails = document.querySelector('#recipe-details');
+
+  console.log(favoriteLabel, favoriteDetails);
 }

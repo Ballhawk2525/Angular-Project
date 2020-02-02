@@ -9,7 +9,7 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,13 +17,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SearchCriteriaComponent,
     RecipeListComponent,
     FavoritesPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FilterPipe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
