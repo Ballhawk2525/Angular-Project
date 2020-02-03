@@ -8,6 +8,7 @@ import { userCreds } from '../titi';
 
 export class ApiService { //API Call
   favArr = [];    
+  apiUrl: string;
     constructor(private http: HttpClient) {}
     getData(userSearch) {
       let apiUrl = 

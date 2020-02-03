@@ -1,23 +1,44 @@
 <div class="recipe-list-container">
-  <h1>Recipes</h1>
   <app-search-criteria></app-search-criteria>
+  <h1>Recipes</h1>
+  <div class="search-bar-container">
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar">
+    <label>
+      Maximum Calories desired:
+      <input type="number" placeholder="maximum calories" [(ngModel)]="maxCal">
+    </label>
+    <label>
+      Vegan
+      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan">
+    </label>
+    <label>
+      Dairy Free
+      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree">
+    </label>
+    <button (click)="onSearch()">
+      Search
+    </button>
+  </div>
+
+
+
+
   <div class="recipes-container">
-    <ul>
-      <li *ngFor="let recipe of data.hits">
-        <button>
-          <i (click)="favorite()" (click)="add(recipe)"class="fas fa-fire" id="favButton"></i>
-        </button>
-        {{ recipe.recipe.label }}
-        <button (click)="toggleClass()">more info</button>
-        <a href="{{ data.hits[0].recipe.url }}" class="sampleLink">
-          Recipe Website</a>
-        <p
-          [className]="activeClass"
-          id="recipe-details"
-          *ngFor="let ingredient of data.hits[0].recipe.ingredientLines">
-          {{ ingredient }}
-        </p>
-      </li>
-    </ul>
+    <div class="recipe-list-container"></div>
+    <div class="recipe-list-item"></div>
+    <li>
+      <label>Recipe List</label>
+      <button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button>
+      <button (click)="toggleClass()">more info</button>
+      <ul *ngFor="let item of recipes; let i = index">
+        <li>
+          <div> {{ item.recipe.label }}</div>
+          <div> {{ item.recipe.uri }}</div>
+          <!-- <div><a href="{{ item.recipe.url }}"> Click to see original source</a></div> -->
+        </li>
+
+      </ul>
+    </li>
+    <br />
   </div>
 </div>
