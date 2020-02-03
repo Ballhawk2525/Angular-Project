@@ -12,6 +12,8 @@ import { SearchCriteriaComponent } from '../search-criteria/search-criteria.comp
 
 export class RecipeListComponent implements OnInit {
   recipes;
+
+
   constructor(private apiService: EdamamApiService) { }
 
   // onSearch() {
@@ -37,7 +39,7 @@ export class RecipeListComponent implements OnInit {
     textSearch: this.textSearch
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onSearch() {
     let searchCriteria = this.textSearch;
@@ -58,8 +60,6 @@ export class RecipeListComponent implements OnInit {
 
     });
   }
-
-
 
 
   favoriteFunction(recipe) {
