@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
 h1 {
   font-family: 'Roboto', sans-serif;
 }
@@ -14,7 +15,7 @@ h1 {
 
 .links li {
   display: inline;
-  padding:  0px 20px;
+  padding: 0px 20px;
 }
 
 .links li a {
@@ -35,16 +36,16 @@ img {
 }
 
 .search-bar-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .recipes-container {
   border: 1px solid #7c7c7c;
   width: 75%;
   font-family: 'Roboto', sans-serif;
-  
+
 }
 
 img {
@@ -53,7 +54,7 @@ img {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .button-container {
