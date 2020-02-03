@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { EdamamApiService } from '../edamam-api.service';
-import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
-
-
+import { Component, OnInit } from "@angular/core";
+import { EdamamApiService } from "../edamam-api.service";
+import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
 
 @Component({
   selector: "app-recipe-list",
   templateUrl: "./recipe-list.component.html",
   styleUrls: ["./recipe-list.component.css"]
 })
-
 export class RecipeListComponent implements OnInit {
   recipes;
   constructor(private apiService: EdamamApiService) { }
@@ -29,55 +26,36 @@ export class RecipeListComponent implements OnInit {
   dairyFree = null;
   textSearch = null;
 
-
   userSearch = {
     calories: this.maxCal,
     vegan: this.vegan,
     dairyFree: this.dairyFree,
     textSearch: this.textSearch
-  }
-
+  };
   ngOnInit() {}
 
   onSearch() {
     let searchCriteria = this.textSearch;
     if (this.vegan === true) {
-      searchCriteria += '&healt=vegan';
+      searchCriteria += "&healt=vegan";
     }
     if (this.dairyFree === true) {
-      searchCriteria += '&healt=dairy-free';
+      searchCriteria += "&healt=dairy-free";
     }
     if (this.maxCal != null) {
-      searchCriteria += '&calories=' + this.maxCal;
+      searchCriteria += "&calories=" + this.maxCal;
     }
-    console.log(searchCriteria)
-      ;
+    console.log(searchCriteria);
 
-    this.apiService.userSearch(searchCriteria).subscribe((data) => {
-      this.recipes = (data as any).hits
-
+    this.apiService.userSearch(searchCriteria).subscribe(data => {
+      this.recipes = (data as any).hits;
     });
   }
 
-
-
-
-  favoriteFunction(recipe) {
-    console.log(recipe);
+  favorite() {
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
   }
-
-  add(recipes) {
-    // this.apiService.
-    this.apiService.favArr.push(recipes);
-
-  }
-
-  // delete(recipe) {
-  //   this.recipes.remove(recipe);
-  // }
-
   activeClass = "hide-details";
   toggleClass() {
     if (this.activeClass === "hide-details") {
@@ -89,8 +67,8 @@ export class RecipeListComponent implements OnInit {
 }
 
 export function addFavorite() {
-  let favoriteLabel = document.querySelector('#recipe-label');
-  let favoriteDetails = document.querySelector('#recipe-details');
+  let favoriteLabel = document.querySelector("#recipe-label");
+  let favoriteDetails = document.querySelector("#recipe-details");
 
   console.log(favoriteLabel, favoriteDetails);
 }

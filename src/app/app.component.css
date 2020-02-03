@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 li, a, p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: dimgray;
   text-decoration: none;
 }
@@ -14,10 +11,6 @@ header {
   padding: 20px 20px;
   /* border: 2px solid dimgray; */
   box-shadow: 10px 10px 8px #888888;
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
 }
 
 .logo {

@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { EdamamApiService } from '../edamam-api.service';
-
+import { Component, OnInit } from "@angular/core";
+import { EdamamApiService } from "../edamam-api.service";
 
 @Component({
-  selector: 'app-search-criteria',
-  templateUrl: './search-criteria.component.html',
-  styleUrls: ['./search-criteria.component.css']
+  selector: "app-search-criteria",
+  templateUrl: "./search-criteria.component.html",
+  styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
   recipes;
@@ -18,12 +17,10 @@ export class SearchCriteriaComponent implements OnInit {
     });
   }
 
-
   onSearch(x) {
-    console.log('helloooooooooooooo')
-    this.apiService.userSearch(x).subscribe((data) => {
-      this.recipes = data
-
+    console.log("helloooooooooooooo");
+    this.apiService.userSearch(x).subscribe(data => {
+      this.recipes = data;
     });
   }
 }
