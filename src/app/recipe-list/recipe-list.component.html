@@ -1,37 +1,18 @@
 <div class="recipe-list-container">
   <h1>Recipes</h1>
   <div class="search-bar-container">
-    <input
-      [(ngModel)]="textSearch"
-      type="text"
-      placeholder="Search Recipes"
-      class="search-bar"
-    />
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar" />
     <label>
       Maximum Calories desired:
-      <input
-        type="number"
-        placeholder="maximum calories"
-        [(ngModel)]="maxCal"
-      />
+      <input type="number" placeholder="maximum calories" [(ngModel)]="maxCal" />
     </label>
     <label>
       Vegan
-      <input
-        type="checkbox"
-        name="dietary-restrictions"
-        value="vegan"
-        [(ngModel)]="vegan"
-      />
+      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan" />
     </label>
     <label>
       Dairy Free
-      <input
-        type="checkbox"
-        name="dietary-restrictions"
-        value="dairy-free"
-        [(ngModel)]="dairyFree"
-      />
+      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree" />
     </label>
     <button (click)="onSearch()">
       Search
@@ -40,22 +21,16 @@
 
   <div class="recipes-container">
     <li>
+
       <label>Recipe Results:</label>
 
-      <label>Recipe List</label>
       <ul *ngFor="let item of recipes; let i = index">
         <li>
-          <div>{{ item.recipe.label }}</div>
-          <div>
-            <a href="{{ item.recipe.url }}"> Click to see original source</a>
-          </div>
-          <p [className]="activeClass" id="recipe-details">
-            {{ item.recipe.ingredientLines }}
-          </p>
-          <button>
-            <i (click)="favorite()" class="fas fa-fire" id="favButton"></i>
-          </button>
-          <button (click)="toggleClass()">more info</button>
+          <div> {{ item.recipe.label }}</div>
+          <div><a href="{{ item.recipe.url }}"> Click to see original source</a></div>
+          <div><img class="thumbnails" src="{{item.recipe.image}}" /></div>
+          <div><button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button></div>
+          <button (click)="toggleClass()">More Info</button>
         </li>
       </ul>
     </li>

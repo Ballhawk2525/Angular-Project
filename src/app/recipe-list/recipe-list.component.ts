@@ -9,6 +9,8 @@ import { SearchCriteriaComponent } from "../search-criteria/search-criteria.comp
 })
 export class RecipeListComponent implements OnInit {
   recipes;
+
+
   constructor(private apiService: EdamamApiService) { }
 
   // onSearch() {
@@ -52,11 +54,15 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
+
+
+
   favorite(item) {
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
     this.apiService.favArr.push(item);
   }
+
   activeClass = "hide-details";
   toggleClass() {
     if (this.activeClass === "hide-details") {
@@ -73,3 +79,4 @@ export function addFavorite() {
 
   console.log(favoriteLabel, favoriteDetails);
 }
+  
