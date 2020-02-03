@@ -13,13 +13,37 @@ export class RecipeListComponent implements OnInit {
   recipes;
   constructor(private apiService: EdamamApiService) { }
 
+
+
+  maxCal = null;
+  vegan = null;
+  dairyFree = null;
+  textSearch = null;
+
+
+  userSearch = {
+    calories: this.maxCal,
+    vegan: this.vegan,
+    dairyFree: this.dairyFree,
+    textSearch: this.textSearch
+  }
   ngOnInit() {
   }
 
-  onSearch(x) {
-    console.log(x)
-    this.apiService.userSearch(x).subscribe((data) => {
-      this.recipes = data.hits;
+  onSearch() {
+    let searchCriteria = this.textSearch;
+    if (this.vegan === true) {
+      searchCriteria += '&healt=vegan';
+    }
+    if (this.dairyFree === true) {
+      searchCriteria += '&healt=dairy-free';
+    }
+    if (this.maxCal != null) {
+      searchCriteria += '&calories=' + this.maxCal;
+    }
+    console.log(searchCriteria)
+    this.apiService.userSearch(searchCriteria).subscribe((data) => {
+      this.recipes = data.hits
     });
   }
 

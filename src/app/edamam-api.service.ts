@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { userCreds } from './titi';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class EdamamApiService {
-  searchTerm;
-  searchResults;
-
   constructor(private http: HttpClient) { }
+
+
 
   loadData() {
     let searchUrl = `https://api.edamam.com/search?q=chicken&app_id=${userCreds.userID}&app_key=${userCreds.userKey}`
@@ -21,10 +22,13 @@ export class EdamamApiService {
     return this.http.get(searchUrl)
   }
 
-  // userSearch(maxCal, searchTerm) {
-  //   let searchUrl = `https://api.edamam.com/search?app_id=${userCreds.userID}&app_key=${userCreds.userKey}&q=${searchTerm}&${maxCal}`
-  //   return this.http.get(searchUrl)
-  // }
+
+
+  // if (${dairyFree} === true) {
+
+}
+
+
 
 
 
@@ -41,4 +45,4 @@ export class EdamamApiService {
 
   // }
 
-}
+

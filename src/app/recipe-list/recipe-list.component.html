@@ -15,7 +15,7 @@
       Dairy Free
       <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree">
     </label>
-    <button (click)="onSearch(textSearch)">
+    <button (click)="onSearch()">
       Search
     </button>
   </div>
@@ -27,13 +27,14 @@
     <div class="recipe-list-container"></div>
     <div class="recipe-list-item"></div>
     <li>
-      <label>Recipe Name Sample</label>
+      <label>Recipe List</label>
       <button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button>
       <button (click)="toggleClass()">more info</button>
       <ul *ngFor="let item of recipes; let i = index">
         <li>
-          <span>{{i}} {{ item.recipe.label }}</span>
-          <span>{{i}} {{ item.recipe.shareAs }}</span>
+          <div> {{ item.recipe.label }}</div>
+          <div> {{ item.recipe.uri }}</div>
+          <div> {{ item.recipe.url }}</div>
         </li>
 
       </ul>
