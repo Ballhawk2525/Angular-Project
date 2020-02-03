@@ -12,22 +12,9 @@ export class SearchCriteriaComponent implements OnInit {
 
   constructor(private apiService: EdamamApiService) { }
 
-  // maxCal = null;
-  // vegan = null;
-  // dairyFree = null;
-  // textSearch = null;
-
-
-  // userSearch = {
-  //   calories: this.maxCal,
-  //   vegan: this.vegan,
-  //   dairyFree: this.dairyFree,
-  //   textSearch: this.textSearch
-  // }
-
   ngOnInit() {
     this.apiService.loadData().subscribe((data) => {
-      this.recipes = data.hits
+      this.recipes = data
     });
   }
 

@@ -42,8 +42,11 @@ export class RecipeListComponent implements OnInit {
       searchCriteria += '&calories=' + this.maxCal;
     }
     console.log(searchCriteria)
+      ;
+
     this.apiService.userSearch(searchCriteria).subscribe((data) => {
-      this.recipes = data.hits
+      this.recipes = (data as any).hits
+
     });
   }
 
