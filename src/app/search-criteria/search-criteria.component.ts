@@ -8,31 +8,22 @@ import { EdamamApiService } from '../edamam-api.service';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
+  recipes;
 
   constructor(private apiService: EdamamApiService) { }
-  minCal = null;
-  maxCal = null;
-  vegan = null;
-  dairyFree = null;
-  textSearch = null;
-
-  userSearch = {
-    minimumCalories: this.minCal,
-    maximumCalories: this.maxCal,
-    vegan: this.vegan,
-    dairyFree: this.dairyFree,
-    textSearch: this.textSearch
-  }
 
   ngOnInit() {
-  }
-
-  onSearch() {
-
-    this.apiService.getData(this.userSearch).subscribe((data) => {
-      console.log(data);
+    this.apiService.loadData().subscribe((data) => {
+      this.recipes = data
     });
-
   }
 
+
+  onSearch(x) {
+    console.log('helloooooooooooooo')
+    this.apiService.userSearch(x).subscribe((data) => {
+      this.recipes = data
+
+    });
+  }
 }

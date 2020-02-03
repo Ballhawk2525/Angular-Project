@@ -1,6 +1,6 @@
-import { EdamamApiService } from "../edamam-api.service";
-import { Component, OnInit, Input } from "@angular/core";
-// import { Favorited } from '../favorited';
+import { Component, OnInit } from '@angular/core';
+import { EdamamApiService } from '../edamam-api.service';
+import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
 
 
 
@@ -11,13 +11,8 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 
 export class RecipeListComponent implements OnInit {
-  constructor(private apiService: EdamamApiService) {}
-  data = this.apiService
-    .getData("")
-    .subscribe(data => (this.data = { ...data }));
-  userSearch = null;
-
-  // @Input() recipes: Favorited;
+  recipes;
+  constructor(private apiService: EdamamApiService) { }
 
   // onSearch() {
   //   this.data = this.apiService.getData(this.userSearch).subscribe(data => {
@@ -29,9 +24,43 @@ export class RecipeListComponent implements OnInit {
   // data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
 
 
+  maxCal = null;
+  vegan = null;
+  dairyFree = null;
+  textSearch = null;
 
+
+  userSearch = {
+    calories: this.maxCal,
+    vegan: this.vegan,
+    dairyFree: this.dairyFree,
+    textSearch: this.textSearch
+  }
 
   ngOnInit() {}
+
+  onSearch() {
+    let searchCriteria = this.textSearch;
+    if (this.vegan === true) {
+      searchCriteria += '&healt=vegan';
+    }
+    if (this.dairyFree === true) {
+      searchCriteria += '&healt=dairy-free';
+    }
+    if (this.maxCal != null) {
+      searchCriteria += '&calories=' + this.maxCal;
+    }
+    console.log(searchCriteria)
+      ;
+
+    this.apiService.userSearch(searchCriteria).subscribe((data) => {
+      this.recipes = (data as any).hits
+
+    });
+  }
+
+
+
 
   favoriteFunction(recipe) {
     console.log(recipe);
