@@ -11,6 +11,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FilterPipe } from './filter.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,

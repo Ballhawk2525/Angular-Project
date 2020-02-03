@@ -1,8 +1,28 @@
 <div class="recipe-list-container">
-  <h1>Recipes</h1>
   <app-search-criteria></app-search-criteria>
+  <h1>Recipes</h1>
+  <div class="search-bar-container">
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar">
+    <label>
+      Maximum Calories desired:
+      <input type="number" placeholder="maximum calories" [(ngModel)]="maxCal">
+    </label>
+    <label>
+      Vegan
+      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan">
+    </label>
+    <label>
+      Dairy Free
+      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree">
+    </label>
+    <button (click)="onSearch(textSearch)">
+      Search
+    </button>
+  </div>
 
-  <div *ngFor="let recipe of data.hits">{{ recipe.recipe.label }}</div>
+
+
+
   <div class="recipes-container">
     <div class="recipe-list-container"></div>
     <div class="recipe-list-item"></div>
@@ -10,11 +30,13 @@
       <label>Recipe Name Sample</label>
       <button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button>
       <button (click)="toggleClass()">more info</button>
-      <a href="{{ data.hits[0].recipe.url }}" class="sampleLink">Recipe Website</a>
-      <p [className]="activeClass" id="recipe-details" *ngFor="let ingredient of data.hits[0].recipe.ingredientLines">
-        {{ ingredient }}
-      </p>
+      <ul *ngFor="let item of recipes; let i = index">
+        <li>
+          <span>{{i}} {{ item.recipe.label }}</span>
+          <span>{{i}} {{ item.recipe.shareAs }}</span>
+        </li>
 
+      </ul>
     </li>
     <br />
   </div>

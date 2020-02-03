@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EdamamApiService } from '../edamam-api.service';
+import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
 
 
 
@@ -9,13 +10,20 @@ import { EdamamApiService } from '../edamam-api.service';
   styleUrls: ["./recipe-list.component.css"]
 })
 export class RecipeListComponent implements OnInit {
+  recipes;
   constructor(private apiService: EdamamApiService) { }
-  data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
+
+  ngOnInit() {
+  }
+
+  onSearch(x) {
+    console.log(x)
+    this.apiService.userSearch(x).subscribe((data) => {
+      this.recipes = data.hits;
+    });
+  }
 
 
-
-
-  ngOnInit() { }
 
   favorite() {
     let fire: any = document.querySelector("#favButton");
