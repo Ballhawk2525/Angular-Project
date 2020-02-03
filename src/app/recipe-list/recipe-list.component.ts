@@ -11,7 +11,13 @@ export class RecipeListComponent implements OnInit {
   data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
   userSearch = null;
 
-  
+  onSearch() {
+    this.data = this.apiService.getData(this.userSearch).subscribe((data) => {
+      this.data = { ...data };
+      console.log(data);
+    });
+
+  }
 
   ngOnInit() { }
 
@@ -27,9 +33,11 @@ export class RecipeListComponent implements OnInit {
       this.activeClass = "hide-details";
     }
   }
+}
 
-  addFavorite() {
-    let favoriteLabel = document.querySelector('#recipe-label');
-    this.apiService.favoritesArray.push(favoriteLabel);
-  }  
+export function addFavorite() {
+  let favoriteLabel = document.querySelector('#recipe-label');
+  let favoriteDetails = document.querySelector('#recipe-details');
+
+  console.log(favoriteLabel, favoriteDetails);
 }
