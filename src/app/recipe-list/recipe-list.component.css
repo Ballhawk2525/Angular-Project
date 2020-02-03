@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-}
-
 .logo {
   cursor: pointer;
 }
@@ -42,9 +36,7 @@ img {
 
 .recipes-container {
   border: 1px solid #7c7c7c;
-  width: 75%;
-  font-family: 'Roboto', sans-serif;
-  
+  width: 75%;  
 }
 
 img {

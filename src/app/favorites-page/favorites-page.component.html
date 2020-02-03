@@ -3,8 +3,8 @@
   <div class="favorite-list">
     <ul>
       <li *ngFor="let recipe of recipes">
-        {{ recipe }}        
-        <button>Delete</button>
+       {{recipe}}
+        <button (click)="delete(item)">Delete</button>
       </li>
     </ul>
   </div>

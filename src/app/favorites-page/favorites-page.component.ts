@@ -15,6 +15,16 @@ export class FavoritesPageComponent implements OnInit {
 
   ngOnInit() {
     this.favoriteArray = this.apiService.favArr;
+    ;
+  }
+
+  add(recipe) {
+    this.favoriteArray.push(recipe);
+    console.log(this.add(recipe));
+  }
+
+  delete(recipe) {
+    this.favoriteArray.splice(recipe);
   }
 
 

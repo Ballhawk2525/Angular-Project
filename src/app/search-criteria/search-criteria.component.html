@@ -1,5 +1,7 @@
 <div class="search-bar-container">
+  <label>
   <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar">
+  </label>
   <label>
     Minimum Calories:
     <input type="number" placeholder="minimum calories" [(ngModel)]="minCal">
@@ -15,9 +17,7 @@
   <label>
     Dairy Free
     <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree">
-
   </label>
-
 
   <button (click)="onSearch()">
     Search

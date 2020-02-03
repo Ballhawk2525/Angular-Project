@@ -33,16 +33,14 @@ export class RecipeListComponent implements OnInit {
 
   ngOnInit() {}
 
-  favoriteFunction(recipe) {
+  favorite(recipe) {
     console.log(recipe);
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
   }
 
-  add(recipes) {
-    // this.apiService.
-    this.apiService.favArr.push(recipes);
-
+  add(recipe) {
+    this.apiService.favArr.push(recipe);
   }
 
   // delete(recipe) {
