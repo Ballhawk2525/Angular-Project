@@ -62,7 +62,13 @@ export class RecipeListComponent implements OnInit {
   }
 
 
+<<<<<<< HEAD
   favoriteFunction(recipe) {
+=======
+
+
+  favorite(recipe) {
+>>>>>>> 90eb9ba2b0953dcf47e2ddb58bd5abda2405483c
     console.log(recipe);
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
@@ -88,7 +94,7 @@ export class RecipeListComponent implements OnInit {
   }
 }
 
-export function addFavorite() {
+function addFavorite() {
   let favoriteLabel = document.querySelector('#recipe-label');
   let favoriteDetails = document.querySelector('#recipe-details');
 

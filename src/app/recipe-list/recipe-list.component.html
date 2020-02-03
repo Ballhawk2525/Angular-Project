@@ -2,26 +2,23 @@
   <app-search-criteria></app-search-criteria>
   <h1>Recipes</h1>
   <div class="search-bar-container">
-    <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar">
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar" />
     <label>
       Maximum Calories desired:
-      <input type="number" placeholder="maximum calories" [(ngModel)]="maxCal">
+      <input type="number" placeholder="maximum calories" [(ngModel)]="maxCal" />
     </label>
     <label>
       Vegan
-      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan">
+      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan" />
     </label>
     <label>
       Dairy Free
-      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree">
+      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree" />
     </label>
     <button (click)="onSearch()">
       Search
     </button>
   </div>
-
-
-
 
   <div class="recipes-container">
     <div class="recipe-list-container"></div>
@@ -38,8 +35,6 @@
           <div><button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button></div>
           <button (click)="toggleClass()">More Info</button>
         </li>
-        <button class="add" [disabled]="clicked" (click)="saveRecipe(); clicked = true;">Add To
-          Favorites</button>
       </ul>
     </li>
     <br />
