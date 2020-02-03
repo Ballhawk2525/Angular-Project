@@ -40,17 +40,22 @@
 
   <div class="recipes-container">
     <li>
-      <h2 class="recipe-list">Recipe List</h2>
+      <label>Recipe Results:</label>
 
+      <label>Recipe List</label>
       <ul *ngFor="let item of recipes; let i = index">
         <li>
+          <div>{{ item.recipe.label }}</div>
+          <div>
+            <a href="{{ item.recipe.url }}"> Click to see original source</a>
+          </div>
+          <p [className]="activeClass" id="recipe-details">
+            {{ item.recipe.ingredientLines }}
+          </p>
           <button>
-            <i (click)="favorite(item)" class="fas fa-fire" id="favButton"></i>
+            <i (click)="favorite()" class="fas fa-fire" id="favButton"></i>
           </button>
           <button (click)="toggleClass()">more info</button>
-          <h3>{{ item.recipe.label }}</h3>
-          {{ item.recipe.url }}
-          <!-- <div><a href="{{ item.recipe.url }}"> Click to see original source</a></div> -->
         </li>
       </ul>
     </li>
