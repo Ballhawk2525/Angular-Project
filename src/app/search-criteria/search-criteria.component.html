@@ -1,1 +1,27 @@
-<p>search-criteria works!</p>
+<div class="search-bar-container">
+    <input [(ngModel)]="userSearch" type="text" placeholder="Search Recipes" class="searchBar">
+
+    <label>
+        Minimum Calories:
+        <input type="number" placeholder="minimum calories" min="0" [(ngModel)]="minCal">
+    </label>
+
+    <label>
+        Maximum Calories:
+        <input type="number" placeholder="maximum calories" min="0" [(ngModel)]="maxCal">
+    </label>
+    <label>
+        Vegan
+        <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan">
+    </label>
+
+    <label>
+        Dairy Free
+        <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree"> 
+    </label>
+
+    <button (click)="onSearch()">
+        Search
+    </button>
+
+</div>
