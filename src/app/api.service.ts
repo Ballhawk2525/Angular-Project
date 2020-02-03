@@ -7,7 +7,6 @@ import { userCreds } from '../titi';
 })
 
 export class ApiService { //API Call
-  favArr = [];
     apiUrl = `https://api.edamam.com/search?q=chicken&app_id=${userCreds.userID}&app_key=${userCreds.userKey}&from=0&to=3&calories=591-722&health=alcohol-free`;
     
     constructor(private http: HttpClient) {}
