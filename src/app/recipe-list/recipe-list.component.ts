@@ -52,9 +52,10 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
-  favorite() {
+  favorite(item) {
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
+    this.apiService.favArr.push(item);
   }
   activeClass = "hide-details";
   toggleClass() {

@@ -2,8 +2,8 @@
   <h1>Favorite Recipes</h1>
   <div class="favorite-list">
     <ul>
-      <li *ngFor="let recipe of recipes">
-       {{recipe}}
+      <li *ngFor="let item of favoriteArray">
+       {{item}}
         <button (click)="delete(item)">Delete</button>
       </li>
     </ul>

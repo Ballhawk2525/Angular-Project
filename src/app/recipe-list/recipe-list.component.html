@@ -45,7 +45,7 @@
       <ul *ngFor="let item of recipes; let i = index">
         <li>
           <button>
-            <i (click)="favorite()" class="fas fa-fire" id="favButton"></i>
+            <i (click)="favorite(item)" class="fas fa-fire" id="favButton"></i>
           </button>
           <button (click)="toggleClass()">more info</button>
           <h3>{{ item.recipe.label }}</h3>
