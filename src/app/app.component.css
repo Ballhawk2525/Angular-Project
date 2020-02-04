@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
-​ * {
-  font-family: 'Bebas Neue', cursive;
-}
-
 li,
 a,
 p {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 18px;
+  font-size: 20px;
   color: dimgray;
   text-decoration: none;
 }

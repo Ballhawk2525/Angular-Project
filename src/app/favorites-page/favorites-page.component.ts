@@ -17,6 +17,7 @@ export class FavoritesPageComponent implements OnInit {
     this.favoriteArray = this.apiService.favArr;
   }
 
-
-
+  delete(item) {
+    this.favoriteArray.splice(item, 1);
+  }
 }

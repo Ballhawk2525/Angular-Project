@@ -8,8 +8,8 @@ import { userCreds } from './titi';
   providedIn: 'root'
 })
 export class EdamamApiService {
-  favArr: any = [];
-
+  favArr = [];    
+  apiUrl: string;
   constructor(private http: HttpClient) { }
 
 
