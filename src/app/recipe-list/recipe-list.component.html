@@ -31,6 +31,9 @@
           <div><img class="thumbnails" src="{{item.recipe.image}}" /></div>
           <div><button><i (click)="favorite()" class="fas fa-fire" id="favButton"></i></button></div>
           <button (click)="toggleClass()">More Info</button>
+          <p [class]="activeClass" id="recipe-details"> 
+            {{ item.recipe.ingredientLines }}
+          </p>
         </li>
       </ul>
     </li>
