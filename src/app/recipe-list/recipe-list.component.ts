@@ -61,6 +61,7 @@ export class RecipeListComponent implements OnInit {
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
     this.apiService.favArr.push(item);
+    // console.log(item);
   }
 
   activeClass = "hide-details";
