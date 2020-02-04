@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+​* {
+  font-family: 'Bebas Neue', cursive !important;
+}
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  padding: 8px;
 }
 
 .logo {
@@ -31,21 +37,28 @@ p {
 }
 
 img {
-  width: 200px;
-  height: 100px;
+  /* width: 200px;
+  height: 100px; */
 }
 
 .search-bar-container {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  font-family: 'Bebas Neue', cursive !important;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 400px;
+  border-radius: 3px;
 }
 
 .recipes-container {
   border: 1px solid #7c7c7c;
   width: 75%;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: 'Bebas Neue', cursive !important;
+  position: relative;
+  left: 200px;
 }
 
 img {
@@ -55,6 +68,7 @@ img {
 
 li {
   list-style: none;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .button-container {
@@ -63,6 +77,8 @@ li {
 
 h2 {
   font-size: small;
+  font-family: 'Bebas Neue', cursive;
+
 }
 
 .hide-details {
@@ -104,4 +120,45 @@ button {
 .recipe-list-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  padding: 5px;
+}
+
+.search-btn {
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.flex-list {
+  /* display: contents; */
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-list li {
+  height: 200px;
+  width: 200px;
+}
+
+.flex-list li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.flex-list li a:hover {
+  color: orange;
+}
+
+ul {
+  display: inline-block;
+}
+
+.thumbnails {
+  mix-blend-mode: multiply;
 }

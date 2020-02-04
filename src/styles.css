@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&Roboto&display=swap');
+
+​ * {
+  font-family: 'Bebas Neue', cursive;
+}
+
+body {
+  margin: 0;
+}

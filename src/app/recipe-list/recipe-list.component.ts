@@ -16,15 +16,6 @@ export class RecipeListComponent implements OnInit {
 
   constructor(private apiService: EdamamApiService) { }
 
-  // onSearch() {
-  //   this.data = this.apiService.getData(this.userSearch).subscribe(data => {
-  //     this.data = { ...data };
-  //     console.log(data);
-  //   });
-  // }
-  // constructor(private apiService: EdamamApiService) { }
-  // data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
-
 
   maxCal = null;
   vegan = null;
@@ -62,13 +53,9 @@ export class RecipeListComponent implements OnInit {
   }
 
 
-<<<<<<< HEAD
-  favoriteFunction(recipe) {
-=======
 
 
   favorite(recipe) {
->>>>>>> 90eb9ba2b0953dcf47e2ddb58bd5abda2405483c
     console.log(recipe);
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
