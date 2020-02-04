@@ -43,9 +43,10 @@ export class RecipeListComponent implements OnInit {
   }
 
   favorite() {
-    let fire: any = document.querySelector("#favButton");
+    let fire: any = document.querySelector("fas");
     fire.classList.toggle("fav");
   }
+  
   activeClass = "hide-details";
   toggleClass() {
     if (this.activeClass === "hide-details") {
