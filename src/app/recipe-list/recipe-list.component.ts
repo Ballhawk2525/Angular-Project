@@ -52,8 +52,7 @@ export class RecipeListComponent implements OnInit {
     if (this.maxCal != null) {
       searchCriteria += '&calories=' + this.maxCal;
     }
-    console.log(searchCriteria)
-      ;
+
 
     this.apiService.userSearch(searchCriteria).subscribe((data) => {
       this.recipes = (data as any).hits
@@ -62,13 +61,9 @@ export class RecipeListComponent implements OnInit {
   }
 
 
-<<<<<<< HEAD
-  favoriteFunction(recipe) {
-=======
 
 
   favorite(recipe) {
->>>>>>> 90eb9ba2b0953dcf47e2ddb58bd5abda2405483c
     console.log(recipe);
     let fire: any = document.querySelector("#favButton");
     fire.classList.toggle("fav");
@@ -94,9 +89,3 @@ export class RecipeListComponent implements OnInit {
   }
 }
 
-function addFavorite() {
-  let favoriteLabel = document.querySelector('#recipe-label');
-  let favoriteDetails = document.querySelector('#recipe-details');
-
-  console.log(favoriteLabel, favoriteDetails);
-}
