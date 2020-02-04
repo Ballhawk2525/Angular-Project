@@ -1,10 +1,6 @@
 <div class="recipe-list-container">
-<<<<<<< HEAD
   <app-search-criteria></app-search-criteria>
 
-=======
-  <h1>Recipes</h1>
->>>>>>> 858ba66555826c4c59c791721f6d9d21e75ec447
   <div class="search-bar-container">
     <h1>Recipes</h1>
     <input [(ngModel)]="textSearch" type="text" placeholder="Search Recipes" class="search-bar" />
@@ -26,14 +22,9 @@
   </div>
 
   <div class="recipes-container">
-<<<<<<< HEAD
-=======
-    <li>
->>>>>>> 858ba66555826c4c59c791721f6d9d21e75ec447
 
     <li>
 
-<<<<<<< HEAD
       <h1>Recipe Results:</h1>
       <div>
         <ul class="flex-list" *ngFor="let item of recipes; let i = index">
@@ -46,21 +37,5 @@
           </li>
         </ul>
       </div>
-=======
-      <ul *ngFor="let item of recipes; let i = index">
-        <li>
-          <div> {{ item.recipe.label }}</div>
-          <div><a href="{{ item.recipe.url }}"> Click to see original source</a></div>
-          <div><img class="thumbnails" src="{{item.recipe.image}}" /></div>
-          <div><button><i (click)="favorite(item)" class="fas fa-fire" id="favButton"></i></button></div>
-          <button (click)="toggleClass()">More Info</button>
-          <p [class]="activeClass" id="recipe-details"> 
-            {{ item.recipe.ingredientLines }}
-          </p>
-        </li>
-      </ul>
-    </li>
-    <br />
->>>>>>> 858ba66555826c4c59c791721f6d9d21e75ec447
   </div>
 </div>
