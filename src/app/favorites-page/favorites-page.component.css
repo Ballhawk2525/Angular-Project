@@ -4,5 +4,9 @@ ul {
     justify-content: space-between;
     border: 1px solid black;
     list-style: none;
-    height: 500px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
 }
