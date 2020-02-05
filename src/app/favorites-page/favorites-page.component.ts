@@ -20,4 +20,6 @@ export class FavoritesPageComponent implements OnInit {
   delete(item) {
     this.favoriteArray.splice(item, 1);
   }
+
+  
 }
