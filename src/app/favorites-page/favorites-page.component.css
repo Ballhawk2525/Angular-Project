@@ -1,12 +1,44 @@
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid black;
-    list-style: none;
+.card {
+  width: 300px;
+  height: 400px;
+  background: #f5f6fa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  font-size: 20px;
 }
 
-li {
-    display: flex;
-    flex-direction: column;
+.delete {
+  margin: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+}
+
+.favorite-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnails {
+  width: 200px;
+  height: 200px;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
