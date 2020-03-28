@@ -13,15 +13,6 @@ export class RecipeListComponent implements OnInit {
 
   constructor(private apiService: EdamamApiService) { }
 
-  // onSearch() {
-  //   this.data = this.apiService.getData(this.userSearch).subscribe(data => {
-  //     this.data = { ...data };
-  //     console.log(data);
-  //   });
-  // }
-  // constructor(private apiService: EdamamApiService) { }
-  // data = this.apiService.getData('').subscribe((data) => this.data = { ...data });
-
 
   maxCal = null;
   vegan = null;
@@ -34,7 +25,7 @@ export class RecipeListComponent implements OnInit {
     dairyFree: this.dairyFree,
     textSearch: this.textSearch
   };
-  ngOnInit() {}
+  ngOnInit() { }
 
   onSearch() {
     let searchCriteria = this.textSearch;
@@ -80,4 +71,4 @@ export function addFavorite() {
 
   console.log(favoriteLabel, favoriteDetails);
 }
-  
+
